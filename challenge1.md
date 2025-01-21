@@ -75,6 +75,9 @@ Read the official documentation, which gave me the base idea on what is AWS CLI 
 ```
 The official documentation had so much in it, but what i wanted to learn for this particular change was less. 
 The real challenge was to filter out and find the commands that will solve the challenge
+After executing 2-3 commands, it is coming timeout for every next command.
+I had to reload the page again and try, it worked.
+It was frustrating and time consuming
 ```
 
 * How did you overcome the challenges?
