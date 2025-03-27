@@ -79,16 +79,21 @@ The value was the secret flag
 ## Reflection
 
 * **What was your approach?**
+
   My approach was systematic: I first assumed the role, verified the permissions using the AWS CLI, and then used the available actions and roles to get access to the secret.
 
 * **What was the biggest challenge?**
+
   The biggest challenge was figuring out what permissions the `Ertz` role had. Initially, I thought I might need to access the Secrets Manager, but the error I encountered showed that the role wasn't authorized for that action.
 
 * **How did you overcome the challenges?**
+
   I overcame this by using the `cloudfox` tool to inspect the permissions of the `Ertz` role. This helped me understand that the role was authorized for `ssm:GetParameter`, leading me to retrieve the secret using AWS Systems Manager.
 
 * **What led to the breakthrough?**
+
   The breakthrough came when I realized that the role's permission to access `ssm:GetParameter` was key. By retrieving the parameter from AWS Systems Manager, I was able to access the flag.
 
 * **On the blue side, how can the learning be used in the future?**
+
   This experience reinforced the importance of understanding and inspecting role permissions. In future engagements, I will be more efficient in using tools like `cloudfox` to analyze permissions and track down hidden secrets or flags more quickly.
